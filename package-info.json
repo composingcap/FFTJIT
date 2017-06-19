@@ -1,0 +1,39 @@
+{
+	"author" : "Christopher Poovey",
+	"authors" : [  ],
+	"description" : "A collection of Max/MSP abstractions to make spectral proccessing simple within Jitter",
+	"displayname" : "",
+	"extends" : "",
+	"extensible" : 0,
+	"homepatcher" : "FFTJIT.overview.maxpat",
+	"max_version_max" : "none",
+	"max_version_min" : "none",
+	"name" : "FFTJIT",
+	"os" : 	{
+		"macintosh" : 		{
+			"platform" : [ "ia32", "x64" ],
+			"min_version" : "none"
+		}
+,
+		"windows" : 		{
+			"platform" : [ "ia32", "x64" ],
+			"min_version" : "none"
+		}
+
+	}
+,
+	"package_extra" : 	{
+
+	}
+,
+	"tags" : [ "FFT" ],
+	"version" : "0.a.1",
+	"website" : "",
+	"filelist" : 	{
+		"externals" : [ ],
+		"patchers" : [],
+		"help" : [  ],
+		"misc" : [ ],
+		"extras" : []
+	}
+}

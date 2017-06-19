@@ -1,0 +1,3 @@
+Bug Report
+
+-- It is a known issue that the max gui causes stutters in playback.  This has to deal with FFTJIT running on the derfered thread.  This should not prove an issue when not editing.
