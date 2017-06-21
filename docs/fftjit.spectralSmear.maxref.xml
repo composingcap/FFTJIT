@@ -47,10 +47,10 @@
 	<objarglist>
 		<objarg name="smear" optional="0" type="i">
 			<digest>
-				past n fromes to be smeared
+				n bins to be smeared
 			</digest>
 			<description>
-				past n fromes to be smeared
+				n bins to be smeared
 			</description>
 		</objarg>
 	</objarglist>
@@ -64,8 +64,13 @@
 		<methodlist>
 
 		<method name='int'>
-			<digest>Smear Factor</digest>
-			<description>Smear Factor</description>
+			<digest>Smeared Bins</digest>
+			<description>Smeared Bins</description>
+		</method>
+		
+		<method name='falloff'>
+			<digest>Factor by witch the smear falls off (> 1)</digest>
+			<description>Factor by witch the smear falls off (> 1)</description>
 		</method>
 		
 

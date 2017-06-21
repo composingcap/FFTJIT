@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 445.0, 702.0, 601.0, 763.0 ],
+		"rect" : [ 971.0, 554.0, 601.0, 763.0 ],
 		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"bglocked" : 0,
@@ -40,14 +40,43 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"format" : 6,
+					"id" : "obj-14",
+					"maxclass" : "flonum",
+					"maximum" : 100.0,
+					"minimum" : 1.0,
+					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 23.0, 346.0, 30.0, 22.0 ],
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 271.0, 235.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 207.0, 284.0, 58.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.+"
+					"text" : "fallOff $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 21.5, 312.0, 110.0, 22.0 ],
+					"style" : "",
+					"text" : "fftjit.spectralSmear"
 				}
 
 			}
@@ -71,7 +100,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 225.0, 404.0, 314.0, 172.0 ]
+					"patching_rect" : [ 223.0, 385.0, 314.0, 172.0 ]
 				}
 
 			}
@@ -82,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 221.0, 266.0, 71.0, 22.0 ],
+					"patching_rect" : [ 101.0, 375.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.unpack 2"
 				}
@@ -94,22 +123,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 85.0, 241.0, 134.0, 20.0 ],
+					"patching_rect" : [ 83.0, 235.0, 134.0, 20.0 ],
 					"style" : "",
-					"text" : "Smear order"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 12.0, 295.0, 110.0, 22.0 ],
-					"style" : "",
-					"text" : "fftjit.spectralSmear"
+					"text" : "smeared bins"
 				}
 
 			}
@@ -119,7 +135,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.0, 471.0, 45.0, 45.0 ],
+					"patching_rect" : [ 27.0, 546.0, 45.0, 45.0 ],
 					"style" : ""
 				}
 
@@ -159,21 +175,21 @@
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"formantcorrection" : [ 0 ],
 									"timestretch" : [ 0 ],
-									"quality" : [ "basic" ],
-									"slurtime" : [ 0.0 ],
-									"mode" : [ "basic" ],
-									"basictuning" : [ 440 ],
-									"speed" : [ 1.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"originallengthms" : [ 0.0 ],
-									"play" : [ 0 ],
-									"pitchcorrection" : [ 0 ],
-									"originaltempo" : [ 120.0 ],
-									"pitchshift" : [ 1.0 ],
 									"formant" : [ 1.0 ],
-									"followglobaltempo" : [ 0 ]
+									"followglobaltempo" : [ 0 ],
+									"slurtime" : [ 0.0 ],
+									"basictuning" : [ 440 ],
+									"pitchshift" : [ 1.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchcorrection" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"originaltempo" : [ 120.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"formantcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"originallengthms" : [ 0.0 ]
 								}
 
 							}
@@ -197,7 +213,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 12.0, 404.0, 112.0, 22.0 ],
+					"patching_rect" : [ 27.0, 479.0, 112.0, 22.0 ],
 					"style" : "",
 					"text" : "pfft~ fftjit.ifft 4096 4"
 				}
@@ -219,7 +235,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-67", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -227,8 +243,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"order" : 1,
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -236,7 +251,15 @@
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"order" : 0,
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"order" : 1,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -249,16 +272,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 1 ],
-					"order" : 0,
-					"source" : [ "obj-66", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-66", 0 ]
 				}
 
@@ -288,7 +302,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -334,14 +348,15 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -351,8 +366,7 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-,
-					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+
 				}
 ,
 				"parentstyle" : "",
