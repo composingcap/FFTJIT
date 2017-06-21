@@ -97,21 +97,21 @@
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"play" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"followglobaltempo" : [ 0 ],
-									"formantcorrection" : [ 0 ],
-									"originallengthms" : [ 0.0 ],
-									"slurtime" : [ 0.0 ],
-									"basictuning" : [ 440 ],
-									"pitchshift" : [ 1.0 ],
-									"originallength" : [ 0.0, "ticks" ],
 									"timestretch" : [ 0 ],
-									"quality" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"formantcorrection" : [ 0 ],
+									"slurtime" : [ 0.0 ],
 									"mode" : [ "basic" ],
 									"pitchcorrection" : [ 0 ],
+									"formant" : [ 1.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"play" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"basictuning" : [ 440 ],
+									"quality" : [ "basic" ],
+									"originaltempo" : [ 120.0 ],
 									"speed" : [ 1.0 ],
-									"originaltempo" : [ 120.0 ]
+									"followglobaltempo" : [ 0 ]
 								}
 
 							}
@@ -124,19 +124,6 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
 					"patching_rect" : [ 65.0, 64.0, 150.0, 30.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 25.0, 110.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -213,13 +200,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
@@ -255,8 +235,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-1::obj-30" : [ "live.numbox[1]", "live.numbox", 0 ],
 			"obj-1::obj-23" : [ "live.button", "live.button", 0 ],
+			"obj-1::obj-30" : [ "live.numbox[1]", "live.numbox", 0 ],
 			"obj-1::obj-29" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-1::obj-25" : [ "live.toggle", "live.toggle", 0 ]
 		}
@@ -322,6 +302,10 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -333,14 +317,10 @@
 					}
 ,
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ]
 				}
 ,
 				"parentstyle" : "",

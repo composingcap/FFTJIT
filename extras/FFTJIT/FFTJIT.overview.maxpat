@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 921.0, 423.0, 457.0, 645.0 ],
+		"rect" : [ 921.0, 423.0, 455.0, 634.0 ],
 		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"bglocked" : 0,
@@ -40,6 +40,21 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-34",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 252.5, 435.0, 109.0, 20.0 ],
+					"presentation_rect" : [ 252.5, 435.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "fftjit.cross"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-33",
 					"maxclass" : "message",
@@ -47,7 +62,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 398.0, 704.0, 110.0, 22.0 ],
-					"presentation_rect" : [ 398.0, 704.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "load fftjit.examples"
 				}
@@ -689,6 +703,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"hidden" : 1,
+					"source" : [ "obj-34", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"hidden" : 1,
 					"midpoints" : [ 289.5, 185.0, 316.0, 185.0, 316.0, 633.0, 317.5, 633.0 ],
 					"source" : [ "obj-7", 1 ]
 				}
@@ -725,11 +747,15 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -739,11 +765,7 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-,
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ]
+
 				}
 ,
 				"parentstyle" : "",
