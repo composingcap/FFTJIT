@@ -44,7 +44,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 234.0, 99.0, 49.0, 22.0 ],
-					"presentation_rect" : [ 234.0, 99.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "zl.iter 2"
 				}
@@ -96,7 +95,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 51.0, 282.0, 57.0, 22.0 ],
+					"patching_rect" : [ 51.0, 260.0, 57.0, 22.0 ],
 					"style" : "",
 					"text" : "dim $1 1"
 				}
@@ -189,7 +188,7 @@
 					"outlettype" : [ "int", "float" ],
 					"patching_rect" : [ 194.0, 255.0, 106.0, 22.0 ],
 					"style" : "",
-					"text" : "fftjit.freq2bin 2048"
+					"text" : "fftjit.freq2bin 4096"
 				}
 
 			}

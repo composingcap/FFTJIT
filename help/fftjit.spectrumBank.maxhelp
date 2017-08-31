@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 382.0, 325.0, 738.0, 763.0 ],
+		"rect" : [ 100.0, 100.0, 738.0, 763.0 ],
 		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"bglocked" : 0,
@@ -39,6 +39,45 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 83.0, 347.0, 24.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "toggle",
+							"parameter_shortname" : "toggle",
+							"parameter_type" : 3,
+							"parameter_initial_enable" : 1,
+							"parameter_initial" : [ 1 ],
+							"parameter_invisible" : 1
+						}
+
+					}
+,
+					"style" : "",
+					"varname" : "toggle"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 83.0, 384.0, 72.0, 22.0 ],
+					"style" : "",
+					"text" : "overflow $1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "message",
@@ -231,7 +270,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 189.0, 421.0, 361.0, 245.0 ],
+					"patching_rect" : [ 189.0, 384.0, 361.0, 245.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -244,21 +283,21 @@
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"basictuning" : [ 440 ],
-									"quality" : [ "basic" ],
-									"originaltempo" : [ 120.0 ],
-									"timestretch" : [ 0 ],
-									"originallengthms" : [ 0.0 ],
-									"play" : [ 0 ],
-									"followglobaltempo" : [ 0 ],
-									"mode" : [ "basic" ],
-									"pitchshift" : [ 1.0 ],
-									"slurtime" : [ 0.0 ],
-									"pitchcorrection" : [ 0 ],
-									"speed" : [ 1.0 ],
 									"formantcorrection" : [ 0 ],
+									"quality" : [ "basic" ],
+									"pitchcorrection" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
 									"originallength" : [ 0.0, "ticks" ],
-									"formant" : [ 1.0 ]
+									"speed" : [ 1.0 ],
+									"originallengthms" : [ 0.0 ],
+									"pitchshift" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"originaltempo" : [ 120.0 ],
+									"mode" : [ "basic" ],
+									"basictuning" : [ 440 ],
+									"timestretch" : [ 0 ],
+									"slurtime" : [ 0.0 ],
+									"play" : [ 0 ]
 								}
 
 							}
@@ -499,6 +538,13 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
@@ -552,6 +598,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -666,6 +719,10 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-19" : [ "toggle", "toggle", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "fftjit.fft.maxpat",
 				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
@@ -699,15 +756,8 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -717,7 +767,14 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
