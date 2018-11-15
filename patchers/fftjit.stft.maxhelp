@@ -88,7 +88,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 310.0, 361.0, 150.0, 20.0 ],
+					"patching_rect" : [ 316.0, 367.0, 150.0, 20.0 ],
 					"text" : "Scrub through STFT"
 				}
 
@@ -147,8 +147,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 249.0, 361.0, 59.0, 22.0 ],
-					"text" : "0, 1 3000"
+					"patching_rect" : [ 249.0, 361.0, 65.0, 22.0 ],
+					"text" : "0, 1 10000"
 				}
 
 			}
