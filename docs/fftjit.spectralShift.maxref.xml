@@ -7,7 +7,7 @@
 <c74object name='fftjit.spectralShift' category='fftjit,  modulation'>
 
 	<digest>Shifts the contents in the FFTJIT matrix by n bins</digest>
-	<description>This is the frequency domain equivalent of a frequency shift.  Fftjit.spectralShift moves a fftjit matrix by <i> bins to the right.
+	<description>This is the frequency domain equivalent of a frequency shift.  Fftjit.spectralShift moves a fftjit matrix by i bins to the right.
 	</description>
 
 
@@ -17,7 +17,7 @@
 		<metadata name='author'>Christopher Poovey</metadata>
 		<metadata name='tag'>fftjit.spectralShift</metadata>
 		<metadata name='tag'>modulation</metadata>
-		
+
 	</metadatalist>
 <!--INLETS-->
 	<inletlist>
@@ -58,7 +58,7 @@
 
 	<!--MESSAGES-->
 
-	
+
 
 
 
@@ -73,7 +73,7 @@
 
 
 
-	
+
 
 
 

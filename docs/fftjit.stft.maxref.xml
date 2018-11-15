@@ -43,7 +43,7 @@
 	<!--ARGUMENTS-->
 
 	<objarglist>
-		<objarg name="Window Size" optional="0" type="int">
+		<objarg name="WindowSize" optional="0" type="int">
 			<digest>
 				Window Size
 			</digest>
@@ -59,7 +59,7 @@
 				Overlap Factor
 			</description>
 		</objarg>
-		<objarg name="Spectrum Bank Name" optional="1" type="symbol">
+		<objarg name="SpectrumBankName" optional="1" type="symbol">
 			<digest>
 				Name of the refrenced Specrum Bank
 			</digest>

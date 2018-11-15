@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1852.0, 969.0 ],
+		"rect" : [ 26.0, 85.0, 1852.0, 969.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,6 +38,54 @@
 		"style" : "Minimal",
 		"subpatcher_template" : "minimal",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 137.5, 823.0, 29.5, 20.0 ],
+					"text" : "/ 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 137.5, 848.0, 47.0, 20.0 ],
+					"text" : "dim $1 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 137.5, 801.0, 95.0, 20.0 ],
+					"text" : "r #0_windowSize"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 52.0, 880.0, 119.0, 20.0 ],
+					"text" : "jit.submatrix @dim 512 1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-27",
 					"maxclass" : "newobj",
@@ -211,7 +259,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 52.0, 960.0, 30.0, 30.0 ]
+					"patching_rect" : [ 52.0, 1025.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -222,7 +270,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 113.5, 836.0, 74.0, 20.0 ],
+					"patching_rect" : [ 230.0, 942.0, 74.0, 20.0 ],
 					"text" : "r #0_toBank"
 				}
 
@@ -257,7 +305,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 121.0, 720.0, 96.0, 20.0 ],
+					"patching_rect" : [ 120.75, 706.0, 96.0, 20.0 ],
 					"text" : "r #0_windowSize"
 				}
 
@@ -293,7 +341,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 52.0, 906.0, 76.0, 20.0 ],
+					"patching_rect" : [ 52.0, 971.0, 76.0, 20.0 ],
 					"text" : "route stft frame"
 				}
 
@@ -305,7 +353,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 52.0, 877.0, 155.0, 20.0 ],
+					"patching_rect" : [ 52.0, 942.0, 155.0, 20.0 ],
 					"text" : "fftjit.spectrumBank #0_stft 100"
 				}
 
@@ -513,9 +561,13 @@
 						"styles" : [ 							{
 								"name" : "Minimal",
 								"default" : 								{
-									"fontsize" : [ 10.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"elementcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
+									"fontface" : [ 0 ],
 									"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"color" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"bgcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
@@ -526,12 +578,8 @@
 										"autogradient" : 0.0
 									}
 ,
-									"fontname" : [ "Futura Medium" ],
-									"color" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"bgcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
-									"accentcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"fontface" : [ 0 ],
-									"elementcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ]
+									"fontsize" : [ 10.0 ],
+									"accentcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -541,7 +589,7 @@
 						"editing_bgcolor" : [ 0.956862745098039, 0.956862745098039, 0.956862745098039, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 52.0, 823.0, 35.0, 20.0 ],
+					"patching_rect" : [ 52.0, 905.0, 35.0, 20.0 ],
 					"text" : "jit.gen"
 				}
 
@@ -1197,7 +1245,21 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
 					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
@@ -1205,6 +1267,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"source" : [ "obj-51", 0 ]
 				}
 
 			}
@@ -1310,9 +1386,13 @@
 		"styles" : [ 			{
 				"name" : "Minimal",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"elementcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
+					"fontface" : [ 0 ],
 					"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
 						"color" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
@@ -1323,12 +1403,93 @@
 						"autogradient" : 0.0
 					}
 ,
-					"fontname" : [ "Futura Medium" ],
-					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"fontface" : [ 0 ],
-					"elementcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"accentcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "Sky",
+				"default" : 				{
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"bgfillcolor" : 					{
+						"type" : "gradient",
+						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
+						"color1" : [ 0.0, 0.501961, 1.0, 1.0 ],
+						"color2" : [ 0.4, 0.4, 1.0, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+,
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "Sky-1",
+				"default" : 				{
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"bgfillcolor" : 					{
+						"type" : "gradient",
+						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
+						"color1" : [ 0.0, 0.501961, 1.0, 1.0 ],
+						"color2" : [ 0.4, 0.4, 1.0, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+,
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "Sky-2",
+				"default" : 				{
+					"fontname" : [ "Arial" ],
+					"elementcolor" : [ 0.375889, 0.380647, 0.363084, 1.0 ],
+					"editing_bgcolor" : [ 0.956862745098039, 0.956862745098039, 0.956862745098039, 1.0 ],
+					"locked_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"bgfillcolor" : 					{
+						"type" : "gradient",
+						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
+						"color1" : [ 0.0, 0.501961, 1.0, 1.0 ],
+						"color2" : [ 0.4, 0.4, 1.0, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+,
+					"fontsize" : [ 12.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

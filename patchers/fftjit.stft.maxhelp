@@ -142,18 +142,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-65",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 20.0, 324.0, 134.0, 22.0 ],
-					"text" : "jit.scissors @columns 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-59",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -392,7 +380,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
+					"destination" : [ "obj-67", 0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
@@ -464,13 +452,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-67", 0 ],
-					"source" : [ "obj-65", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-7", 0 ]
 				}
@@ -487,28 +468,28 @@
 		"dependency_cache" : [ 			{
 				"name" : "fftjit.stft.maxpat",
 				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
-				"patcherrelativepath" : "../patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.spectrumBank.maxpat",
 				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
-				"patcherrelativepath" : "../patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.ifft.maxpat",
 				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
-				"patcherrelativepath" : "../patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.bankScrubber.maxpat",
 				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/help",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -517,9 +498,13 @@
 		"styles" : [ 			{
 				"name" : "Minimal",
 				"default" : 				{
-					"fontsize" : [ 10.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"elementcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
+					"fontface" : [ 0 ],
 					"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
 						"color" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
@@ -530,12 +515,8 @@
 						"autogradient" : 0.0
 					}
 ,
-					"fontname" : [ "Futura Medium" ],
-					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"fontface" : [ 0 ],
-					"elementcolor" : [ 0.999999, 0.999974, 0.999991, 1.0 ]
+					"fontsize" : [ 10.0 ],
+					"accentcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -544,9 +525,13 @@
 , 			{
 				"name" : "Sky",
 				"default" : 				{
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -558,11 +543,7 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -571,9 +552,13 @@
 , 			{
 				"name" : "Sky-1",
 				"default" : 				{
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -585,11 +570,7 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -598,10 +579,16 @@
 , 			{
 				"name" : "Sky-2",
 				"default" : 				{
-					"fontsize" : [ 12.0 ],
+					"fontname" : [ "Arial" ],
+					"elementcolor" : [ 0.375889, 0.380647, 0.363084, 1.0 ],
+					"editing_bgcolor" : [ 0.956862745098039, 0.956862745098039, 0.956862745098039, 1.0 ],
+					"locked_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -613,14 +600,8 @@
 						"autogradient" : 0
 					}
 ,
-					"fontname" : [ "Arial" ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"locked_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
-					"editing_bgcolor" : [ 0.956862745098039, 0.956862745098039, 0.956862745098039, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.375889, 0.380647, 0.363084, 1.0 ]
+					"fontsize" : [ 12.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
