@@ -2,16 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1721.0, 606.0, 738.0, 684.0 ],
-		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
-		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 100.0, 100.0, 738.0, 684.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +45,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 86.0, 265.5, 221.0, 33.0 ],
-					"style" : "",
 					"text" : "interpolates between the spectra.  0 is the fisrt, 1 is the second"
 				}
 
@@ -58,8 +56,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 444.0, 199.0, 186.0, 20.0 ],
-					"presentation_rect" : [ 458.0, 197.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "Changes the phase wieghtings.  "
 				}
 
@@ -72,7 +68,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 132.0, 194.0, 150.0, 33.0 ],
-					"style" : "",
 					"text" : "Changes the modulus wieghtings.  "
 				}
 
@@ -85,7 +80,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 188.0, 361.0, 115.0, 22.0 ],
-					"style" : "",
 					"text" : "jit.glue @columns 2"
 				}
 
@@ -98,7 +92,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
 					"patching_rect" : [ 188.0, 325.0, 71.0, 22.0 ],
-					"style" : "",
 					"text" : "jit.unpack 2"
 				}
 
@@ -120,13 +113,14 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 4,
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
+						"classnamespace" : "box",
 						"rect" : [ 59.0, 81.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
@@ -162,7 +156,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 50.0, 147.0, 343.0, 22.0 ],
-									"style" : "",
 									"text" : "jit.rota @dim 500 500 @adapt 0 @theta 1.5708 @offset_y 500"
 								}
 
@@ -175,7 +168,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 50.0, 100.0, 192.0, 22.0 ],
-									"style" : "",
 									"text" : "jit.matrix @adapt 0 @dim 500 500"
 								}
 
@@ -202,8 +194,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "jit_matrix" ],
-									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
-									"style" : ""
+									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -247,9 +238,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 389.0, 199.0, 50.0, 22.0 ],
-					"presentation_rect" : [ 410.0, 186.0, 0.0, 0.0 ],
-					"style" : ""
+					"patching_rect" : [ 389.0, 199.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -261,8 +250,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 389.0, 235.0, 60.0, 22.0 ],
-					"presentation_rect" : [ 395.0, 211.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "phase $1"
 				}
 
@@ -277,8 +264,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 71.0, 194.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 71.0, 194.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -290,7 +276,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 71.0, 235.0, 51.0, 22.0 ],
-					"style" : "",
 					"text" : "mod $1"
 				}
 
@@ -305,8 +290,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 12.0, 271.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 12.0, 271.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -318,8 +302,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 12.0, 81.0, 24.0, 24.0 ],
-					"style" : ""
+					"patching_rect" : [ 12.0, 81.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -327,25 +310,26 @@
 				"box" : 				{
 					"data" : 					{
 						"clips" : [ 							{
-								"filename" : "goldberg3.mp3",
+								"filename" : "huge.aiff",
 								"filekind" : "audiofile",
-								"loop" : 1,
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
 								"content_state" : 								{
-									"timestretch" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"followglobaltempo" : [ 0 ],
-									"slurtime" : [ 0.0 ],
-									"basictuning" : [ 440 ],
-									"pitchshift" : [ 1.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"pitchcorrection" : [ 0 ],
 									"speed" : [ 1.0 ],
-									"originaltempo" : [ 120.0 ],
+									"formant" : [ 1.0 ],
 									"quality" : [ "basic" ],
-									"play" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"pitchshift" : [ 1.0 ],
 									"formantcorrection" : [ 0 ],
 									"mode" : [ "basic" ],
-									"originallengthms" : [ 0.0 ]
+									"originallengthms" : [ 0.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"play" : [ 0 ],
+									"slurtime" : [ 0.0 ],
+									"originaltempo" : [ 120.0 ],
+									"basictuning" : [ 440 ],
+									"pitchcorrection" : [ 0 ]
 								}
 
 							}
@@ -357,8 +341,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"patching_rect" : [ 188.0, 105.0, 150.0, 30.0 ],
-					"style" : ""
+					"patching_rect" : [ 188.0, 105.0, 150.0, 30.0 ]
 				}
 
 			}
@@ -370,7 +353,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 188.0, 147.0, 109.0, 22.0 ],
-					"style" : "",
 					"text" : "pfft~ fftjit.fft 4096 4"
 				}
 
@@ -383,7 +365,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 12.0, 316.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "fftjit.cross"
 				}
 
@@ -394,8 +375,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.0, 471.0, 45.0, 45.0 ],
-					"style" : ""
+					"patching_rect" : [ 12.0, 471.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -406,7 +386,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 59.0, 361.0, 20.0 ],
-					"style" : "",
 					"text" : "A cross synthisis abstraction"
 				}
 
@@ -420,9 +399,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 5.0, 361.0, 47.0 ],
-					"style" : "",
 					"text" : "fftjit.cross",
-					"textcolor" : [ 0.0, 0.0, 0.501961, 1.0 ]
+					"textcolor" : [ 0.0, 0.0, 0.50196099281311, 1.0 ]
 				}
 
 			}
@@ -430,25 +408,26 @@
 				"box" : 				{
 					"data" : 					{
 						"clips" : [ 							{
-								"filename" : "Hae-Sun_Kang-Section1.aiff",
+								"filename" : "eroica.aiff",
 								"filekind" : "audiofile",
-								"loop" : 1,
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
 								"content_state" : 								{
-									"timestretch" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"followglobaltempo" : [ 0 ],
-									"slurtime" : [ 0.0 ],
-									"basictuning" : [ 440 ],
-									"pitchshift" : [ 1.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"pitchcorrection" : [ 0 ],
 									"speed" : [ 1.0 ],
-									"originaltempo" : [ 120.0 ],
+									"formant" : [ 1.0 ],
 									"quality" : [ "basic" ],
-									"play" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"pitchshift" : [ 1.0 ],
 									"formantcorrection" : [ 0 ],
 									"mode" : [ "basic" ],
-									"originallengthms" : [ 0.0 ]
+									"originallengthms" : [ 0.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"play" : [ 0 ],
+									"slurtime" : [ 0.0 ],
+									"originaltempo" : [ 120.0 ],
+									"basictuning" : [ 440 ],
+									"pitchcorrection" : [ 0 ]
 								}
 
 							}
@@ -460,8 +439,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"patching_rect" : [ 12.0, 105.0, 150.0, 30.0 ],
-					"style" : ""
+					"patching_rect" : [ 12.0, 105.0, 150.0, 30.0 ]
 				}
 
 			}
@@ -473,7 +451,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 12.0, 404.0, 112.0, 22.0 ],
-					"style" : "",
 					"text" : "pfft~ fftjit.ifft 4096 4"
 				}
 
@@ -486,7 +463,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 12.0, 147.0, 109.0, 22.0 ],
-					"style" : "",
 					"text" : "pfft~ fftjit.fft 4096 4"
 				}
 
@@ -630,52 +606,54 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "fftjit.fft.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
+				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.ifft.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
+				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "Hae-Sun_Kang-Section1.aiff",
-				"bootpath" : "~/Documents/Max 7/Packages/ircam-antescofo/patchers/Anthemes2-Remake/A2-Simulations",
-				"patcherrelativepath" : "../../ircam-antescofo/patchers/Anthemes2-Remake/A2-Simulations",
+				"name" : "eroica.aiff",
+				"bootpath" : "C74:/docs/tutorial-patchers/msp-tut",
 				"type" : "AIFF",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.cross.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
+				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "goldberg3.mp3",
-				"bootpath" : "~/Documents/Max 7/Packages/bach/media",
-				"patcherrelativepath" : "../../bach/media",
-				"type" : "Mp3 ",
+				"name" : "huge.aiff",
+				"bootpath" : "C74:/docs/tutorial-patchers/msp-tut",
+				"type" : "AIFF",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "jit.*.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "jit.pass.mxe64",
+				"type" : "mx64"
 			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -686,7 +664,11 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -695,7 +677,9 @@
  ],
 		"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 		"elementcolor" : [ 0.375889, 0.380647, 0.363084, 1.0 ],
-		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ]
 	}
 
 }
