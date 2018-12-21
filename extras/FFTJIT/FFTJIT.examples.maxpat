@@ -2,16 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 757.0, 416.0, 456.0, 643.0 ],
-		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
-		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 522.0, 648.0, 451.0, 633.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,7 +46,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 749.0, 586.0, 29.5, 22.0 ],
-					"style" : "",
 					"text" : "+ 1"
 				}
 
@@ -61,7 +59,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 762.0, 666.0, 79.0, 22.0 ],
-					"style" : "",
 					"text" : "route symbol"
 				}
 
@@ -74,7 +71,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.5, 97.0, 226.0, 27.0 ],
-					"style" : "",
 					"text" : "ReadyMades"
 				}
 
@@ -89,17 +85,16 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 12.0, 123.0, 269.0, 50.0 ],
-					"style" : "",
+					"patching_rect" : [ 12.0, 123.0, 257.0, 134.0 ],
 					"tabcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-					"tabs" : [ "Sostenuto", "Spectral Shuffle", "Spectral Pedal" ]
+					"tabs" : [ "Sostenuto", "Spectral Shuffle", "Spectral Pedal", "Get Freq Peaks" ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"coll_data" : 					{
-						"count" : 3,
+						"count" : 4,
 						"data" : [ 							{
 								"key" : 1,
 								"value" : [ "sostenuto.maxpat" ]
@@ -111,6 +106,10 @@
 , 							{
 								"key" : 3,
 								"value" : [ "spectralPedal.maxpat" ]
+							}
+, 							{
+								"key" : 4,
+								"value" : [ "getFreqPeaks.maxpat" ]
 							}
  ]
 					}
@@ -126,7 +125,6 @@
 						"embed" : 1
 					}
 ,
-					"style" : "",
 					"text" : "coll FFTJITexamples"
 				}
 
@@ -142,13 +140,14 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 4,
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
+						"classnamespace" : "box",
 						"rect" : [ 59.0, 81.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -184,7 +183,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 59.0, 100.0, 60.0, 22.0 ],
-									"style" : "",
 									"text" : "loadbang"
 								}
 
@@ -197,7 +195,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 230.0, 59.0, 22.0 ],
-									"style" : "",
 									"text" : "tosymbol"
 								}
 
@@ -210,7 +207,6 @@
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
 									"patching_rect" : [ 72.0, 196.0, 250.0, 22.0 ],
-									"style" : "",
 									"text" : "regexp extras/FFTJIT @substitute examples/"
 								}
 
@@ -223,7 +219,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 72.0, 150.0, 89.0, 22.0 ],
-									"style" : "",
 									"text" : "filepath default"
 								}
 
@@ -236,8 +231,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 312.0, 30.0, 30.0 ],
-									"style" : ""
+									"patching_rect" : [ 50.0, 312.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -278,11 +272,9 @@
 						"description" : "",
 						"digest" : "",
 						"globalpatchername" : "",
-						"style" : "",
 						"tags" : ""
 					}
 ,
-					"style" : "",
 					"text" : "p getPath"
 				}
 
@@ -296,7 +288,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 566.0, 743.0, 81.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend load"
 				}
 
@@ -310,7 +301,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 568.0, 707.0, 197.0, 22.0 ],
-					"style" : "",
 					"text" : "combine path filename @triggers 1"
 				}
 
@@ -324,7 +314,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 566.0, 783.0, 53.0, 22.0 ],
-					"style" : "",
 					"text" : "pcontrol"
 				}
 
@@ -336,7 +325,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 8.5, 70.0, 365.0, 20.0 ],
-					"style" : "",
 					"text" : "Some examples of FFTJIT usage"
 				}
 
@@ -350,9 +338,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.5, 20.5, 361.0, 47.0 ],
-					"style" : "",
 					"text" : "FFTJIT Examples",
-					"textcolor" : [ 0.0, 0.0, 0.501961, 1.0 ]
+					"textcolor" : [ 0.0, 0.0, 0.50196099281311, 1.0 ]
 				}
 
 			}
@@ -365,14 +352,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 18.5, 362.0, 47.0 ],
-					"style" : "",
 					"text" : "FFTJIT Examples"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"angle" : 298.017324,
+					"angle" : 298.017323999999974,
 					"background" : 1,
 					"grad1" : [ 0.884332, 0.911863, 1.0, 0.6 ],
 					"grad2" : [ 0.0, 1.0, 1.0, 1.0 ],
@@ -384,8 +370,7 @@
 					"patching_rect" : [ 0.5, 0.0, 458.0, 647.0 ],
 					"proportion" : 0.323073,
 					"pt1" : [ 0.183168, 0.147826 ],
-					"pt2" : [ 0.891089, 1.478261 ],
-					"style" : ""
+					"pt2" : [ 0.891089, 1.478261 ]
 				}
 
 			}
@@ -471,18 +456,12 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "fftjit.png",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/media",
-				"patcherrelativepath" : "../../media",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -493,15 +472,14 @@
 						"autogradient" : 0
 					}
 ,
-					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -510,7 +488,9 @@
  ],
 		"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 		"elementcolor" : [ 0.375889, 0.380647, 0.363084, 1.0 ],
-		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ]
 	}
 
 }
