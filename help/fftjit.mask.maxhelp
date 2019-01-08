@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 493.0, 911.0, 738.0, 568.0 ],
+		"rect" : [ 1168.0, 667.0, 738.0, 568.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,25 +39,64 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-25",
+					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 221.0, 172.0, 74.0, 22.0 ],
-					"text" : "tapout~ 500"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 74.0, 241.0, 70.0, 22.0 ],
+					"text" : "loadmess 7"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-24",
+					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "tapconnect" ],
-					"patching_rect" : [ 221.0, 148.0, 67.0, 22.0 ],
-					"text" : "tapin~ 500"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 184.0, 180.0, 109.0, 22.0 ],
+					"text" : "pfft~ fftjit.fft 4096 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"data" : 					{
+						"clips" : [ 							{
+								"absolutepath" : "anton.aif",
+								"filename" : "anton.aif",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"originaltempo" : [ 120.0 ],
+									"pitchshift" : [ 1.0 ],
+									"originallengthms" : [ 0.0 ],
+									"pitchcorrection" : [ 0 ],
+									"basictuning" : [ 440 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"speed" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"timestretch" : [ 0 ],
+									"formant" : [ 1.0 ],
+									"followglobaltempo" : [ 0 ],
+									"play" : [ 0 ],
+									"mode" : [ "basic" ],
+									"formantcorrection" : [ 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"id" : "obj-7",
+					"maxclass" : "playlist~",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
+					"patching_rect" : [ 184.0, 131.0, 150.0, 30.0 ]
 				}
 
 			}
@@ -68,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 13.0, 274.0, 59.0, 22.0 ],
+					"patching_rect" : [ 13.0, 313.0, 59.0, 22.0 ],
 					"text" : "fftjit.mask"
 				}
 
@@ -83,21 +122,21 @@
 								"selection" : [ 0.0, 1.0 ],
 								"loop" : 0,
 								"content_state" : 								{
-									"formantcorrection" : [ 0 ],
 									"slurtime" : [ 0.0 ],
+									"originaltempo" : [ 120.0 ],
+									"pitchshift" : [ 1.0 ],
+									"originallengthms" : [ 0.0 ],
+									"pitchcorrection" : [ 0 ],
+									"basictuning" : [ 440 ],
+									"originallength" : [ 0.0, "ticks" ],
 									"speed" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"timestretch" : [ 0 ],
+									"formant" : [ 1.0 ],
+									"followglobaltempo" : [ 0 ],
 									"play" : [ 0 ],
 									"mode" : [ "basic" ],
-									"originaltempo" : [ 120.0 ],
-									"formant" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"pitchcorrection" : [ 0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"basictuning" : [ 440 ],
-									"originallengthms" : [ 0.0 ],
-									"timestretch" : [ 0 ],
-									"followglobaltempo" : [ 0 ],
-									"pitchshift" : [ 1.0 ]
+									"formantcorrection" : [ 0 ]
 								}
 
 							}
@@ -115,24 +154,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 133.0, 209.0, 109.0, 22.0 ],
-					"text" : "pfft~ fftjit.fft 4096 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 209.0, 109.0, 22.0 ],
+					"patching_rect" : [ 13.0, 189.0, 109.0, 22.0 ],
 					"text" : "pfft~ fftjit.fft 4096 4"
 				}
 
@@ -276,7 +303,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 287.0, 261.0, 361.0, 245.0 ],
+					"patching_rect" : [ 314.0, 259.0, 361.0, 245.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -287,7 +314,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 147.0, 365.0, 69.0, 22.0 ],
+					"patching_rect" : [ 142.0, 372.0, 69.0, 22.0 ],
 					"text" : "s toDisplay"
 				}
 
@@ -301,7 +328,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 181.0, 272.0, 50.0, 22.0 ]
+					"patching_rect" : [ 13.0, 241.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -312,7 +339,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 181.0, 304.0, 61.0, 22.0 ],
+					"patching_rect" : [ 13.0, 273.0, 61.0, 22.0 ],
 					"text" : "thresh $1"
 				}
 
@@ -335,7 +362,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 13.0, 401.0, 45.0, 45.0 ]
+					"patching_rect" : [ 13.0, 440.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -371,7 +398,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 13.0, 333.0, 112.0, 22.0 ],
+					"patching_rect" : [ 13.0, 372.0, 112.0, 22.0 ],
 					"text" : "pfft~ fftjit.ifft 4096 4"
 				}
 
@@ -379,23 +406,14 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 1 ],
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"order" : 0,
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -432,20 +450,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-25", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -471,6 +475,21 @@
 					"destination" : [ "obj-107", 0 ],
 					"order" : 1,
 					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 1 ],
+					"midpoints" : [ 193.5, 292.0, 62.5, 292.0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
@@ -516,6 +535,12 @@
 				"type" : "gJIT",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "anton.aif",
+				"bootpath" : "C74:/media/msp",
+				"type" : "AIFF",
+				"implicit" : 1
+			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
@@ -523,9 +548,8 @@
 				"default" : 				{
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -536,10 +560,11 @@
 						"autogradient" : 0
 					}
 ,
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

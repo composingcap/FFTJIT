@@ -2,16 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1606.0, 500.0, 500.0, 610.0 ],
-		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
-		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 211.0, 99.0, 500.0, 610.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 14.0,
@@ -46,8 +45,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 228.5, 478.0, 201.0, 38.0 ],
-					"presentation_rect" : [ 228.5, 475.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "Current effects that use plugs:\nfftjit.frameGrains"
 				}
 
@@ -60,8 +57,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 14.5, 478.0, 173.0, 38.0 ],
-					"presentation_rect" : [ 17.5, 478.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "Current plugs:\nfftjit.plug.spectralStretch"
 				}
 
@@ -75,10 +70,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 14.5, 12.0, 288.0, 47.0 ],
-					"presentation_rect" : [ 29.5, 15.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "FFTJIT Plug API",
-					"textcolor" : [ 0.0, 0.0, 0.501961, 1.0 ]
+					"textcolor" : [ 0.0, 0.0, 0.50196099281311, 1.0 ]
 				}
 
 			}
@@ -90,8 +83,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 12.5, 409.0, 441.0, 53.0 ],
-					"presentation_rect" : [ 15.5, 409.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "All object names should be followed by a list of parametes.  This list can be as long as max cna handle and it is up to the programer to decide how the messages should be parsed."
 				}
 
@@ -104,7 +95,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 12.5, 335.0, 441.0, 53.0 ],
-					"style" : "",
 					"text" : "fftjit.plug.blank is named in this way to facilitate running the plugin.  In FFTJIT objects that accept plugs only the charaters after \"fftjit.plug.\" are needed to plugin an object."
 				}
 
@@ -117,7 +107,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 12.5, 138.0, 435.0, 22.0 ],
-					"style" : "",
 					"text" : "This is fftjit.plug.blank- a version of this is avalible in the snipits menu"
 				}
 
@@ -131,8 +120,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.5, 69.0, 452.0, 53.0 ],
-					"style" : "",
+					"patching_rect" : [ 12.5, 69.0, 453.0, 53.0 ],
 					"text" : "The plug objects are used as inserts in a poly~ object.  In order for yout plug objects to interface with the FFTJIT objects they my follow naming and programing conventions."
 				}
 
@@ -156,13 +144,14 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 4,
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
+						"classnamespace" : "box",
 						"rect" : [ 59.0, 81.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -200,13 +189,14 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 7,
-											"minor" : 3,
-											"revision" : 4,
+											"major" : 8,
+											"minor" : 0,
+											"revision" : 2,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
+										"classnamespace" : "box",
 										"rect" : [ 84.0, 106.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -242,8 +232,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 126.0, 153.0, 30.0, 30.0 ],
-													"style" : ""
+													"patching_rect" : [ 126.0, 153.0, 30.0, 30.0 ]
 												}
 
 											}
@@ -256,8 +245,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 126.0, 61.0, 30.0, 30.0 ],
-													"style" : ""
+													"patching_rect" : [ 126.0, 61.0, 30.0, 30.0 ]
 												}
 
 											}
@@ -277,11 +265,9 @@
 										"description" : "",
 										"digest" : "",
 										"globalpatchername" : "",
-										"style" : "",
 										"tags" : ""
 									}
 ,
-									"style" : "",
 									"text" : "p myEffect"
 								}
 
@@ -294,8 +280,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 266.0, 45.5, 153.0, 74.0 ],
-									"presentation_rect" : [ 233.0, 116.0, 0.0, 0.0 ],
-									"style" : "",
 									"text" : "Any neccicaty delay happen here, otherwise just pass the bang (comes from the end of the window)"
 								}
 
@@ -307,11 +291,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 186.0, 114.0, 37.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"attr_comment" : ""
-									}
-,
-									"style" : "",
 									"text" : "out 2"
 								}
 
@@ -324,7 +303,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
 									"patching_rect" : [ 186.0, 51.0, 56.0, 22.0 ],
-									"style" : "",
 									"text" : "sel bang"
 								}
 
@@ -336,8 +314,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 228.0, 10.0, 191.0, 20.0 ],
-									"presentation_rect" : [ 228.0, 14.0, 0.0, 0.0 ],
-									"style" : "",
 									"text" : "<-- Effect Parameters Enter Here"
 								}
 
@@ -349,7 +325,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 43.0, 11.0, 129.0, 20.0 ],
-									"style" : "",
 									"text" : "<-- Matrix Enters Here"
 								}
 
@@ -362,7 +337,10 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 186.0, 10.0, 30.0, 22.0 ],
-									"style" : "",
+									"saved_object_attributes" : 									{
+										"attr_comment" : ""
+									}
+,
 									"text" : "in 2"
 								}
 
@@ -374,7 +352,10 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 9.0, 114.0, 37.0, 22.0 ],
-									"style" : "",
+									"saved_object_attributes" : 									{
+										"attr_comment" : ""
+									}
+,
 									"text" : "out 1"
 								}
 
@@ -387,7 +368,10 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 9.0, 10.0, 30.0, 22.0 ],
-									"style" : "",
+									"saved_object_attributes" : 									{
+										"attr_comment" : ""
+									}
+,
 									"text" : "in 1"
 								}
 
@@ -446,15 +430,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 12.5, 11.0, 288.0, 47.0 ],
-					"style" : "",
-					"text" : "FFTJIT Plug API",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"text" : "FFTJIT Plug API"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"angle" : 298.017327,
+					"angle" : 298.017327000000023,
 					"background" : 1,
 					"grad1" : [ 0.862745, 0.870588, 0.878431, 0.6 ],
 					"grad2" : [ 0.0, 1.0, 1.0, 1.0 ],
@@ -466,8 +448,7 @@
 					"patching_rect" : [ -3.5, -4.0, 508.0, 617.0 ],
 					"proportion" : 0.323073,
 					"pt1" : [ 0.183168, 0.147826 ],
-					"pt2" : [ 0.891089, 1.478261 ],
-					"style" : ""
+					"pt2" : [ 0.891089, 1.478261 ]
 				}
 
 			}
@@ -489,25 +470,15 @@
 			}
  ],
 		"lines" : [  ],
-		"dependency_cache" : [ 			{
-				"name" : "fftjit.png",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/media",
-				"patcherrelativepath" : "../../media",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "fftjit.plug.blank.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
-				"patcherrelativepath" : "../../patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -518,22 +489,20 @@
 						"autogradient" : 0
 					}
 ,
-					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
 				"multi" : 0
 			}
  ],
-		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ]
 	}
 
 }

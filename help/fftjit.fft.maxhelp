@@ -2,16 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 100.0, 100.0, 738.0, 763.0 ],
-		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
-		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -48,8 +47,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 201.0, 113.0, 141.0, 29.0 ],
-					"size" : 1.0,
-					"style" : ""
+					"size" : 1.0
 				}
 
 			}
@@ -61,7 +59,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 201.0, 149.0, 57.0, 22.0 ],
-					"style" : "",
 					"text" : "pak 0. 1."
 				}
 
@@ -74,7 +71,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 201.0, 178.0, 77.0, 22.0 ],
-					"style" : "",
 					"text" : "thresh $1 $2"
 				}
 
@@ -86,7 +82,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 491.0, 438.0, 150.0, 20.0 ],
-					"style" : "",
 					"text" : "Delta Phase",
 					"textjustification" : 2
 				}
@@ -99,7 +94,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 491.0, 325.0, 150.0, 20.0 ],
-					"style" : "",
 					"text" : "Modulus",
 					"textjustification" : 2
 				}
@@ -122,8 +116,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.0, 278.0, 45.0, 45.0 ],
-					"style" : ""
+					"patching_rect" : [ 12.0, 278.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -135,7 +128,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 58.0, 361.0, 47.0 ],
-					"style" : "",
 					"text" : "fftjit.fft is designed to create a spectral domain matrix that can be manipulated outside of pttt~ space.  When working with fftjit matrices, all proccesses are run on the defered thread"
 				}
 
@@ -149,9 +141,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 5.0, 361.0, 47.0 ],
-					"style" : "",
 					"text" : "fftjit.fft",
-					"textcolor" : [ 0.0, 0.0, 0.501961, 1.0 ]
+					"textcolor" : [ 0.0, 0.0, 0.50196099281311, 1.0 ]
 				}
 
 			}
@@ -163,7 +154,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
 					"patching_rect" : [ 140.0, 206.0, 71.0, 22.0 ],
-					"style" : "",
 					"text" : "jit.unpack 2"
 				}
 
@@ -183,25 +173,26 @@
 				"box" : 				{
 					"data" : 					{
 						"clips" : [ 							{
-								"filename" : "Hae-Sun_Kang-Section1.aiff",
+								"absolutepath" : "huge.aiff",
+								"filename" : "huge.aiff",
 								"filekind" : "audiofile",
-								"loop" : 1,
+								"loop" : 0,
 								"content_state" : 								{
 									"slurtime" : [ 0.0 ],
 									"originaltempo" : [ 120.0 ],
-									"formant" : [ 1.0 ],
-									"formantcorrection" : [ 0 ],
+									"pitchshift" : [ 1.0 ],
+									"originallengthms" : [ 0.0 ],
+									"pitchcorrection" : [ 0 ],
+									"basictuning" : [ 440 ],
+									"originallength" : [ 0.0, "ticks" ],
 									"speed" : [ 1.0 ],
 									"quality" : [ "basic" ],
-									"pitchshift" : [ 1.0 ],
-									"mode" : [ "basic" ],
-									"basictuning" : [ 440 ],
-									"pitchcorrection" : [ 0 ],
-									"originallengthms" : [ 0.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"play" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"formant" : [ 1.0 ],
 									"followglobaltempo" : [ 0 ],
-									"timestretch" : [ 0 ]
+									"play" : [ 0 ],
+									"mode" : [ "basic" ],
+									"formantcorrection" : [ 0 ]
 								}
 
 							}
@@ -213,8 +204,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"patching_rect" : [ 12.0, 113.0, 150.0, 30.0 ],
-					"style" : ""
+					"patching_rect" : [ 12.0, 113.0, 150.0, 30.0 ]
 				}
 
 			}
@@ -226,7 +216,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 12.0, 210.0, 112.0, 22.0 ],
-					"style" : "",
 					"text" : "pfft~ fftjit.ifft 4096 4"
 				}
 
@@ -239,7 +228,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 12.0, 153.0, 109.0, 22.0 ],
-					"style" : "",
 					"text" : "pfft~ fftjit.fft 4096 4"
 				}
 
@@ -329,22 +317,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "fftjit.fft.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.ifft.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "Hae-Sun_Kang-Section1.aiff",
-				"bootpath" : "~/Documents/Max 7/Packages/ircam-antescofo/patchers/Anthemes2-Remake/A2-Simulations",
-				"patcherrelativepath" : "../../ircam-antescofo/patchers/Anthemes2-Remake/A2-Simulations",
+				"name" : "huge.aiff",
+				"bootpath" : "C74:/docs/tutorial-patchers/msp-tut",
 				"type" : "AIFF",
 				"implicit" : 1
 			}
@@ -353,6 +340,10 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -363,15 +354,11 @@
 						"autogradient" : 0
 					}
 ,
-					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -380,7 +367,9 @@
  ],
 		"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 		"elementcolor" : [ 0.375889, 0.380647, 0.363084, 1.0 ],
-		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+		"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+		"bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ],
+		"editing_bgcolor" : [ 0.4, 0.8, 1.0, 1.0 ]
 	}
 
 }

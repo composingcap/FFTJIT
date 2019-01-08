@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,6 +38,18 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 239.0, 170.0, 77.0, 22.0 ],
+					"text" : "loadmess 12"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-112",
 					"maxclass" : "comment",
@@ -208,26 +220,27 @@
 				"box" : 				{
 					"data" : 					{
 						"clips" : [ 							{
+								"absolutepath" : "FemVoice.aif",
 								"filename" : "FemVoice.aif",
 								"filekind" : "audiofile",
 								"selection" : [ 0.0, 1.0 ],
 								"loop" : 0,
 								"content_state" : 								{
-									"speed" : [ 1.0 ],
-									"formant" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"followglobaltempo" : [ 0 ],
-									"timestretch" : [ 0 ],
-									"pitchshift" : [ 1.0 ],
-									"formantcorrection" : [ 0 ],
-									"mode" : [ "basic" ],
-									"originallengthms" : [ 0.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"play" : [ 0 ],
 									"slurtime" : [ 0.0 ],
 									"originaltempo" : [ 120.0 ],
+									"pitchshift" : [ 1.0 ],
+									"originallengthms" : [ 0.0 ],
+									"pitchcorrection" : [ 0 ],
 									"basictuning" : [ 440 ],
-									"pitchcorrection" : [ 0 ]
+									"originallength" : [ 0.0, "ticks" ],
+									"speed" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"timestretch" : [ 0 ],
+									"formant" : [ 1.0 ],
+									"followglobaltempo" : [ 0 ],
+									"play" : [ 0 ],
+									"mode" : [ "basic" ],
+									"formantcorrection" : [ 0 ]
 								}
 
 							}
@@ -269,6 +282,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-86", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-74", 0 ],
 					"source" : [ "obj-109", 0 ]
@@ -380,14 +400,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "fftjit.fft.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.ifft.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -400,32 +420,27 @@
 			}
 , 			{
 				"name" : "fftjit.spectralStretch.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.++.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "jit.!-.mxe64",
-				"type" : "mx64"
 			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -436,10 +451,11 @@
 						"autogradient" : 0
 					}
 ,
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

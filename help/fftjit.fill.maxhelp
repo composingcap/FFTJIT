@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 264.0, 263.0, 738.0, 889.0 ],
+		"rect" : [ 100.0, 100.0, 738.0, 889.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,18 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 88.0, 508.0, 135.0, 22.0 ],
+					"text" : "zl.len @zlmaxsize 4096"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-97",
 					"maxclass" : "comment",
@@ -341,7 +353,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 446.0, 149.0, 22.0 ],
+					"patching_rect" : [ 31.0, 413.0, 149.0, 22.0 ],
 					"text" : "zl.group @zlmaxsize 4096"
 				}
 
@@ -528,7 +540,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"order" : 0,
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
+					"order" : 1,
 					"source" : [ "obj-57", 0 ]
 				}
 
