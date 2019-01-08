@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 522.0, 648.0, 451.0, 633.0 ],
+		"rect" : [ 72.0, 32.0, 352.0, 305.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -87,14 +87,14 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 12.0, 123.0, 257.0, 134.0 ],
 					"tabcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-					"tabs" : [ "Sostenuto", "Spectral Shuffle", "Spectral Pedal", "Get Freq Peaks" ]
+					"tabs" : [ "Sostenuto", "Spectral Shuffle", "Spectral Pedal", "Get Freq Peaks", "Freq Peak Transcriber (requires bach)" ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"coll_data" : 					{
-						"count" : 4,
+						"count" : 5,
 						"data" : [ 							{
 								"key" : 1,
 								"value" : [ "sostenuto.maxpat" ]
@@ -110,6 +110,10 @@
 , 							{
 								"key" : 4,
 								"value" : [ "getFreqPeaks.maxpat" ]
+							}
+, 							{
+								"key" : 5,
+								"value" : [ "freqPeakTranscriber.maxpat" ]
 							}
  ]
 					}
@@ -461,7 +465,10 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -472,14 +479,11 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ]
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

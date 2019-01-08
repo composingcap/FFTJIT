@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 1408.0, 862.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -38,39 +39,12 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-24",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 326.0, 201.0, 50.0, 22.0 ],
-					"style" : "",
-					"text" : "44100."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 416.0, 242.0, 115.0, 22.0 ],
-					"style" : "",
-					"text" : "r #0_windowSize"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 205.0, 83.0, 105.0, 22.0 ],
-					"style" : "",
 					"text" : "route windowSize"
 				}
 
@@ -83,8 +57,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 276.0, 325.0, 30.0, 30.0 ],
-					"style" : ""
+					"patching_rect" : [ 276.0, 325.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -96,7 +69,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 276.0, 222.0, 29.5, 22.0 ],
-					"style" : "",
 					"text" : "* 1."
 				}
 
@@ -109,7 +81,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 215.5, 130.0, 113.0, 22.0 ],
-					"style" : "",
 					"text" : "r #0_windowSize"
 				}
 
@@ -122,7 +93,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 205.0, 164.0, 29.5, 22.0 ],
-					"style" : "",
 					"text" : "/ 1."
 				}
 
@@ -135,7 +105,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 109.0, 49.0, 115.0, 22.0 ],
-					"style" : "",
 					"text" : "routepass jit_matrix"
 				}
 
@@ -148,7 +117,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 343.0, 76.0, 60.0, 22.0 ],
-					"style" : "",
 					"text" : "loadbang"
 				}
 
@@ -160,8 +128,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 343.0, 125.0, 104.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 343.0, 114.0, 104.0, 22.0 ],
 					"text" : "patcherargs 4096"
 				}
 
@@ -173,7 +140,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 343.0, 153.0, 115.0, 22.0 ],
-					"style" : "",
 					"text" : "s #0_windowSize"
 				}
 
@@ -185,7 +151,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 110.0, 303.0, 115.0, 22.0 ],
-					"style" : "",
 					"text" : "s #0_windowSize"
 				}
 
@@ -198,7 +163,6 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "float", "int", "int" ],
 					"patching_rect" : [ 257.0, 159.0, 63.0, 22.0 ],
-					"style" : "",
 					"text" : "dspstate~"
 				}
 
@@ -211,7 +175,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 110.0, 262.0, 29.5, 22.0 ],
-					"style" : "",
 					"text" : "* 2"
 				}
 
@@ -224,7 +187,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 110.0, 206.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "unpack i i"
 				}
 
@@ -237,7 +199,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 110.0, 164.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "route dim"
 				}
 
@@ -251,8 +212,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 109.0, 14.0, 30.0, 30.0 ],
-					"style" : ""
+					"patching_rect" : [ 109.0, 14.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -264,7 +224,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 110.0, 135.0, 75.0, 22.0 ],
-					"style" : "",
 					"text" : "jit.matrixinfo"
 				}
 
@@ -373,15 +332,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 1 ],
-					"order" : 1,
-					"source" : [ "obj-6", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 1 ],
-					"order" : 0,
 					"source" : [ "obj-6", 1 ]
 				}
 
