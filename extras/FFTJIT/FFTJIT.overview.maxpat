@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 300.0, 119.0, 452.0, 702.0 ],
+		"rect" : [ 222.0, 158.0, 452.0, 702.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -811,7 +811,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-14", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-41", 1 ]
 				}
@@ -850,10 +850,12 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -865,10 +867,8 @@
 						"autogradient" : 0
 					}
 ,
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ]
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
