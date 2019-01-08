@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 384.0, 309.0, 436.0, 713.0 ],
+		"rect" : [ 384.0, 309.0, 478.0, 729.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,32 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-44",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 429.0, 596.0, 66.0, 22.0 ],
+					"text" : "load fftjit.gl"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-43",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 314.5, 40.0, 92.0, 17.0 ],
+					"text" : "GPU"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-42",
 					"maxclass" : "textbutton",
@@ -175,7 +201,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 323.5, 42.0, 100.0, 20.0 ],
+					"patching_rect" : [ 394.5, 12.0, 68.0, 21.0 ],
 					"text" : "Examples"
 				}
 
@@ -275,7 +301,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 323.5, 14.0, 100.0, 20.0 ],
+					"patching_rect" : [ 309.5, 12.0, 73.0, 20.0 ],
 					"text" : "Plug API"
 				}
 
@@ -840,6 +866,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"hidden" : 1,
 					"midpoints" : [ 289.5, 185.0, 316.0, 185.0, 316.0, 633.0, 319.5, 633.0 ],
@@ -871,12 +913,14 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -887,9 +931,7 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-,
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
+
 				}
 ,
 				"parentstyle" : "",
