@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 72.0, 32.0, 325.0, 295.0 ],
+		"rect" : [ 72.0, 32.0, 329.0, 347.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -85,16 +85,16 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 12.0, 123.0, 257.0, 134.0 ],
+					"patching_rect" : [ 12.0, 123.0, 253.0, 192.0 ],
 					"tabcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-					"tabs" : [ "Sostenuto", "Spectral Shuffle", "Spectral Pedal", "Get Freq Peaks", "Freq Peak Transcriber (requires bach)", "Banded Reverb" ]
+					"tabs" : [ "Sostenuto", "Spectral Shuffle", "Spectral Pedal", "Get Freq Peaks", "Freq Peak Transcriber (requires bach)", "Banded Reverb", "Banded Stretcher" ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"coll_data" : 					{
-						"count" : 6,
+						"count" : 7,
 						"data" : [ 							{
 								"key" : 1,
 								"value" : [ "sostenuto.maxpat" ]
@@ -118,6 +118,10 @@
 , 							{
 								"key" : 6,
 								"value" : [ "bandedReverb.maxpat" ]
+							}
+, 							{
+								"key" : 7,
+								"value" : [ "bandedStretcher.maxpat" ]
 							}
  ]
 					}
@@ -469,10 +473,12 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -484,10 +490,8 @@
 						"autogradient" : 0
 					}
 ,
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ]
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

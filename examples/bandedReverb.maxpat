@@ -178,7 +178,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 24.0, 124.0, 92.0, 22.0 ],
-					"text" : "fftjit.HighPass 1"
+					"text" : "fftjit.HighPass 4"
 				}
 
 			}
@@ -189,7 +189,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 118.0, 124.0, 150.0, 20.0 ],
-					"text" : "Remove DC Bin"
+					"text" : "Remove DC Bin and mud"
 				}
 
 			}
