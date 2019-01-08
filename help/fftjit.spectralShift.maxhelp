@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -41,26 +41,27 @@
 				"box" : 				{
 					"data" : 					{
 						"clips" : [ 							{
+								"absolutepath" : "FemVoice.aif",
 								"filename" : "FemVoice.aif",
 								"filekind" : "audiofile",
 								"selection" : [ 0.0, 1.0 ],
 								"loop" : 0,
 								"content_state" : 								{
-									"speed" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
 									"formant" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"followglobaltempo" : [ 0 ],
+									"basictuning" : [ 440 ],
 									"timestretch" : [ 0 ],
 									"pitchshift" : [ 1.0 ],
-									"formantcorrection" : [ 0 ],
-									"mode" : [ "basic" ],
+									"followglobaltempo" : [ 0 ],
+									"speed" : [ 1.0 ],
 									"originallengthms" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
 									"originallength" : [ 0.0, "ticks" ],
-									"play" : [ 0 ],
-									"slurtime" : [ 0.0 ],
+									"quality" : [ "basic" ],
 									"originaltempo" : [ 120.0 ],
-									"basictuning" : [ 440 ],
-									"pitchcorrection" : [ 0 ]
+									"play" : [ 0 ],
+									"slurtime" : [ 0.0 ]
 								}
 
 							}
@@ -91,12 +92,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-111",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 214.0, 148.0, 176.0, 33.0 ],
-					"text" : "Shift in bins factor. 2 is an octave"
+					"patching_rect" : [ 214.0, 153.0, 176.0, 20.0 ],
+					"text" : "Shift an fftjit matrix by N bins"
 				}
 
 			}
@@ -330,28 +330,28 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "fftjit.fft.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.ifft.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.spectralShift.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fftjit.++.maxpat",
-				"bootpath" : "D:/Documents/Max 8/Packages/FFTJIT/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -362,20 +362,18 @@
 				"type" : "AIFF",
 				"implicit" : 1
 			}
-, 			{
-				"name" : "jit.!-.mxe64",
-				"type" : "mx64"
-			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -386,10 +384,8 @@
 						"autogradient" : 0
 					}
 ,
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ]
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
