@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
+			"major" : 8,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 1506.0, 876.0, 1009.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -44,7 +45,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 673.0, 83.0, 67.0, 22.0 ],
-					"style" : "",
 					"text" : "route clear"
 				}
 
@@ -57,7 +57,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 673.0, 117.0, 55.0, 22.0 ],
-					"style" : "",
 					"text" : "jit.matrix"
 				}
 
@@ -70,7 +69,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 489.0, 87.0, 115.0, 22.0 ],
-					"style" : "",
 					"text" : "routepass jit_matrix"
 				}
 
@@ -83,7 +81,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 136.0, 295.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "gate~ 1 1"
 				}
 
@@ -96,7 +93,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 246.0, 270.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "gate~ 1 1"
 				}
 
@@ -109,7 +105,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 186.0, 224.0, 35.0, 22.0 ],
-					"style" : "",
 					"text" : ">~ 0"
 				}
 
@@ -121,8 +116,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 489.0, 142.0, 145.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 489.0, 142.0, 163.0, 22.0 ],
 					"text" : "jit.matrix #0_thisFrame"
 				}
 
@@ -135,11 +129,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 489.0, 55.0, 30.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
-					"style" : "",
 					"text" : "in 1"
 				}
 
@@ -151,7 +140,6 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 127.0, 500.0, 54.0, 22.0 ],
-					"style" : "",
 					"text" : "fftout~ 1"
 				}
 
@@ -164,7 +152,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 127.0, 400.0, 109.0, 22.0 ],
-					"style" : "",
 					"text" : "poltocar~"
 				}
 
@@ -177,7 +164,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 246.0, 308.0, 84.0, 22.0 ],
-					"style" : "",
 					"text" : "frameaccum~"
 				}
 
@@ -189,8 +175,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 302.0, 176.0, 166.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 293.0, 203.0, 184.0, 22.0 ],
 					"text" : "jit.peek~ #0_thisFrame 1 1"
 				}
 
@@ -202,8 +187,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 127.0, 176.0, 166.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 62.0, 170.0, 184.0, 22.0 ],
 					"text" : "jit.peek~ #0_thisFrame 1 0"
 				}
 
@@ -215,9 +199,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 68.0, 99.0, 87.0, 22.0 ],
-					"style" : "",
-					"text" : "fftin~ 1 square"
+					"patching_rect" : [ 36.0, 87.0, 45.0, 22.0 ],
+					"text" : "fftin~ 1"
 				}
 
 			}
@@ -358,15 +341,10 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -376,7 +354,12 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
