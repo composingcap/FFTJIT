@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,6 +38,18 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 12.0, 194.0, 70.0, 22.0 ],
+					"text" : "fftjit.change"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-7",
 					"linecount" : 2,
@@ -165,21 +177,21 @@
 								"filekind" : "audiofile",
 								"loop" : 0,
 								"content_state" : 								{
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"quality" : [ "basic" ],
+									"formant" : [ 1.0 ],
+									"formantcorrection" : [ 0 ],
 									"slurtime" : [ 0.0 ],
+									"play" : [ 0 ],
 									"originaltempo" : [ 120.0 ],
 									"pitchshift" : [ 1.0 ],
-									"originallengthms" : [ 0.0 ],
+									"mode" : [ "basic" ],
 									"pitchcorrection" : [ 0 ],
 									"basictuning" : [ 440 ],
-									"originallength" : [ 0.0, "ticks" ],
 									"speed" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"timestretch" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"followglobaltempo" : [ 0 ],
-									"play" : [ 0 ],
-									"mode" : [ "basic" ],
-									"formantcorrection" : [ 0 ]
+									"originallengthms" : [ 0.0 ]
 								}
 
 							}
@@ -223,13 +235,27 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-66", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
 					"order" : 1,
 					"source" : [ "obj-66", 0 ]
 				}
@@ -301,15 +327,27 @@
 				"type" : "AIFF",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "fftjit.change.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -319,12 +357,7 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-,
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
+
 				}
 ,
 				"parentstyle" : "",

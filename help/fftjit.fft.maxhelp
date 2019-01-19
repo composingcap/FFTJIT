@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 100.0, 738.0, 763.0 ],
+		"rect" : [ 528.0, 472.0, 738.0, 763.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,18 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 12.0, 186.0, 70.0, 22.0 ],
+					"text" : "fftjit.change"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"floatoutput" : 1,
 					"id" : "obj-7",
@@ -70,7 +82,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.0, 178.0, 77.0, 22.0 ],
+					"patching_rect" : [ 201.0, 173.0, 77.0, 22.0 ],
 					"text" : "thresh $1 $2"
 				}
 
@@ -116,7 +128,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.0, 278.0, 45.0, 45.0 ]
+					"patching_rect" : [ 11.0, 306.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -176,23 +188,23 @@
 								"absolutepath" : "huge.aiff",
 								"filename" : "huge.aiff",
 								"filekind" : "audiofile",
-								"loop" : 0,
+								"loop" : 1,
 								"content_state" : 								{
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"quality" : [ "basic" ],
+									"formant" : [ 1.0 ],
+									"formantcorrection" : [ 0 ],
 									"slurtime" : [ 0.0 ],
+									"play" : [ 0 ],
 									"originaltempo" : [ 120.0 ],
 									"pitchshift" : [ 1.0 ],
-									"originallengthms" : [ 0.0 ],
+									"mode" : [ "basic" ],
 									"pitchcorrection" : [ 0 ],
 									"basictuning" : [ 440 ],
-									"originallength" : [ 0.0, "ticks" ],
 									"speed" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"timestretch" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"followglobaltempo" : [ 0 ],
-									"play" : [ 0 ],
-									"mode" : [ "basic" ],
-									"formantcorrection" : [ 0 ]
+									"originallengthms" : [ 0.0 ]
 								}
 
 							}
@@ -215,7 +227,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 12.0, 210.0, 112.0, 22.0 ],
+					"patching_rect" : [ 12.0, 227.0, 112.0, 22.0 ],
 					"text" : "pfft~ fftjit.ifft 4096 4"
 				}
 
@@ -235,7 +247,24 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"order" : 1,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"order" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-66", 0 ],
+					"midpoints" : [ 210.5, 198.0, 177.0, 198.0, 177.0, 146.0, 21.5, 146.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -249,16 +278,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-67", 0 ],
-					"order" : 1,
-					"source" : [ "obj-66", 0 ]
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-66", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-90", 0 ],
-					"order" : 0,
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-66", 0 ]
 				}
 
@@ -335,15 +362,27 @@
 				"type" : "AIFF",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "fftjit.change.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/FFTJIT/patchers",
+				"patcherrelativepath" : "../patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.341176, 0.027451, 0.023529, 1.0 ],
@@ -353,12 +392,7 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-,
-					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ]
+
 				}
 ,
 				"parentstyle" : "",
