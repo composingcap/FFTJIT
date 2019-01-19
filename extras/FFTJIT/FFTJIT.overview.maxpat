@@ -4,15 +4,15 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 384.0, 309.0, 478.0, 729.0 ],
+		"rect" : [ 384.0, 309.0, 501.0, 751.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -39,6 +39,21 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 12.5, 691.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 12.5, 691.0, 100.0, 20.0 ],
+					"text" : "fftjit.change"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-44",
 					"maxclass" : "message",
@@ -59,6 +74,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 314.5, 40.0, 92.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 314.5, 40.0, 92.0, 17.0 ],
 					"text" : "GPU"
 				}
 
@@ -72,6 +89,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 244.5, 653.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 244.5, 653.0, 100.0, 20.0 ],
 					"text" : "fftjit.minBin"
 				}
 
@@ -85,6 +104,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 124.5, 256.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 124.5, 256.0, 100.0, 20.0 ],
 					"text" : "fftjit.bandPass"
 				}
 
@@ -98,6 +119,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 13.5, 655.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 13.5, 655.0, 100.0, 20.0 ],
 					"text" : "fftjit.spill"
 				}
 
@@ -111,6 +134,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 124.5, 656.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 124.5, 656.0, 100.0, 20.0 ],
 					"text" : "fftjit.fill"
 				}
 
@@ -124,6 +149,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 3.5, 256.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 3.5, 256.0, 100.0, 20.0 ],
 					"text" : "fftjit.lowPass"
 				}
 
@@ -137,6 +164,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 234.5, 220.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 234.5, 220.0, 100.0, 20.0 ],
 					"text" : "fftjit.highPass"
 				}
 
@@ -150,6 +179,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 289.5, 408.0, 118.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 289.5, 408.0, 118.0, 20.0 ],
 					"text" : "fftjit.stft"
 				}
 
@@ -163,6 +194,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 246.5, 626.0, 123.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 246.5, 626.0, 123.0, 21.0 ],
 					"text" : "fftjit.spectrumGen"
 				}
 
@@ -176,6 +209,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 254.5, 481.0, 109.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 254.5, 481.0, 109.0, 20.0 ],
 					"text" : "fftjit.cross"
 				}
 
@@ -202,6 +237,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 394.5, 12.0, 68.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 394.5, 12.0, 68.0, 21.0 ],
 					"text" : "Examples"
 				}
 
@@ -215,6 +252,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 122.5, 625.0, 109.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 122.5, 625.0, 109.0, 20.0 ],
 					"text" : "fftjit.freq2bin"
 				}
 
@@ -228,6 +267,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 12.5, 625.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 12.5, 625.0, 100.0, 20.0 ],
 					"text" : "fftjit.bin2freq"
 				}
 
@@ -239,6 +280,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.5, 595.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 10.5, 595.0, 150.0, 20.0 ],
 					"text" : "Utilities"
 				}
 
@@ -252,6 +295,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 149.5, 408.0, 118.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 149.5, 408.0, 118.0, 20.0 ],
 					"text" : "fftjit.bankScrubber"
 				}
 
@@ -265,6 +310,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 121.5, 220.0, 99.5703125, 20.40625 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 121.5, 220.0, 99.5703125, 20.40625 ],
 					"text" : "fftjit.mask"
 				}
 
@@ -278,6 +325,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 5.5, 221.0, 99.570312000000001, 20.40625 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 5.5, 221.0, 99.570312000000001, 20.40625 ],
 					"text" : "fftjit.getPeaks"
 				}
 
@@ -289,6 +338,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 4.5, 189.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.5, 189.0, 150.0, 20.0 ],
 					"text" : "Filters"
 				}
 
@@ -302,6 +353,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 309.5, 12.0, 73.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 309.5, 12.0, 73.0, 20.0 ],
 					"text" : "Plug API"
 				}
 
@@ -315,6 +368,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 235.5, 559.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 235.5, 559.0, 100.0, 20.0 ],
 					"text" : "fftjit.frameGrains"
 				}
 
@@ -328,6 +383,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 118.5, 558.0, 109.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 118.5, 558.0, 109.0, 20.0 ],
 					"text" : "fftjit.spectralSmear"
 				}
 
@@ -341,6 +398,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 8.5, 558.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 8.5, 558.0, 100.0, 20.0 ],
 					"text" : "fftjit.timeSmear"
 				}
 
@@ -352,6 +411,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.5, 523.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 523.0, 150.0, 20.0 ],
 					"text" : "Advanced Modulations"
 				}
 
@@ -365,6 +426,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 122.5, 480.0, 109.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 122.5, 480.0, 109.0, 20.0 ],
 					"text" : "fftjit.spectralStretch"
 				}
 
@@ -378,6 +441,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 7.5, 480.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 480.0, 100.0, 20.0 ],
 					"text" : "fftjit.spectralShift"
 				}
 
@@ -389,6 +454,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.5, 446.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 446.0, 150.0, 20.0 ],
 					"text" : "Modulations"
 				}
 
@@ -402,6 +469,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 7.5, 407.0, 122.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 407.0, 122.0, 21.0 ],
 					"text" : "fftjit.spectrumBank"
 				}
 
@@ -415,6 +484,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 240.5, 336.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 240.5, 336.0, 100.0, 20.0 ],
 					"text" : "fftjit.reg"
 				}
 
@@ -428,6 +499,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 122.5, 336.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 122.5, 336.0, 100.0, 20.0 ],
 					"text" : "fftjit.mean"
 				}
 
@@ -441,6 +514,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 7.5, 336.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 336.0, 100.0, 20.0 ],
 					"text" : "fftjit.++"
 				}
 
@@ -480,6 +555,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 239.5, 150.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 239.5, 150.0, 100.0, 20.0 ],
 					"text" : "fftjit.fftFilter"
 				}
 
@@ -491,6 +568,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.5, 374.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 374.0, 150.0, 20.0 ],
 					"text" : "STFT"
 				}
 
@@ -502,6 +581,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 7.5, 300.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.5, 300.0, 150.0, 20.0 ],
 					"text" : "Basic Functions"
 				}
 
@@ -513,6 +594,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 114.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.5, 114.0, 150.0, 20.0 ],
 					"text" : "Transforms"
 				}
 
@@ -526,6 +609,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 121.5, 150.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 121.5, 150.0, 100.0, 20.0 ],
 					"text" : "fftjit.ifft"
 				}
 
@@ -539,6 +624,8 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 6.5, 150.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.5, 150.0, 100.0, 20.0 ],
 					"text" : "fftjit.fft"
 				}
 
@@ -551,6 +638,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 8.5, 70.0, 365.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 8.5, 70.0, 365.0, 33.0 ],
 					"text" : "FFTJIT is designed to allow for seemless editing of spectral space within Jitter.  "
 				}
 
@@ -564,6 +654,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 8.5, 19.5, 361.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 8.5, 19.5, 361.0, 47.0 ],
 					"text" : "FFTJIT Overview",
 					"textcolor" : [ 0.0, 0.0, 0.50196099281311, 1.0 ]
 				}
@@ -578,6 +670,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 6.5, 18.5, 362.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.5, 18.5, 362.0, 47.0 ],
 					"text" : "FFTJIT Overview"
 				}
 
@@ -594,6 +688,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ -2.5, -1.0, 511.0, 789.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ -2.5, -1.0, 511.0, 789.0 ],
 					"proportion" : 0.323073,
 					"pt1" : [ 0.183168, 0.147826 ],
 					"pt2" : [ 0.891089, 1.478261 ]
@@ -612,7 +708,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ -0.5, 0.0, 509.0, 788.0 ],
-					"pic" : "Macintosh HD:/Users/Chris/Documents/Max 7/Packages/FFTJIT/media/fftjit.png"
+					"pic" : "Macintosh HD:/Users/Chris/Documents/Max 7/Packages/FFTJIT/media/fftjit.png",
+					"presentation" : 1,
+					"presentation_rect" : [ -0.5, 0.0, 509.0, 788.0 ]
 				}
 
 			}
@@ -883,6 +981,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-45", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
 					"hidden" : 1,
 					"midpoints" : [ 289.5, 185.0, 316.0, 185.0, 316.0, 633.0, 319.5, 633.0 ],
 					"source" : [ "obj-7", 1 ]
@@ -913,14 +1018,14 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
 					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
