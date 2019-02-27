@@ -39,6 +39,21 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 176.5, 377.0, 118.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 338.5, 409.0, 118.0, 20.0 ],
+					"text" : "fftjit.spectrumBank2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-45",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -180,7 +195,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 289.5, 408.0, 118.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 289.5, 408.0, 118.0, 20.0 ],
+					"presentation_rect" : [ 254.5, 410.0, 75.0, 20.0 ],
 					"text" : "fftjit.stft"
 				}
 
@@ -296,7 +311,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 149.5, 408.0, 118.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 149.5, 408.0, 118.0, 20.0 ],
+					"presentation_rect" : [ 130.5, 409.0, 118.0, 20.0 ],
 					"text" : "fftjit.bankScrubber"
 				}
 
@@ -326,7 +341,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 5.5, 221.0, 99.570312000000001, 20.40625 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.5, 221.0, 99.570312000000001, 20.40625 ],
+					"presentation_rect" : [ 5.5, 221.0, 99.5703125, 20.40625 ],
 					"text" : "fftjit.getPeaks"
 				}
 
@@ -470,7 +485,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 7.5, 407.0, 122.0, 21.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.5, 407.0, 122.0, 21.0 ],
+					"presentation_rect" : [ 7.5, 407.0, 112.0, 21.0 ],
 					"text" : "fftjit.spectrumBank"
 				}
 
@@ -988,6 +1003,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-46", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
 					"hidden" : 1,
 					"midpoints" : [ 289.5, 185.0, 316.0, 185.0, 316.0, 633.0, 319.5, 633.0 ],
 					"source" : [ "obj-7", 1 ]
@@ -1018,14 +1040,9 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
-					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -1036,7 +1053,12 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
+					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
