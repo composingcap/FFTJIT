@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,6 +38,21 @@
 		"style" : "Sky",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-47",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 302.5, 379.0, 118.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 255.5, 434.0, 73.0, 20.0 ],
+					"text" : "fftjit.stft2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-46",
 					"maxclass" : "textbutton",
@@ -1010,6 +1025,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-47", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
 					"hidden" : 1,
 					"midpoints" : [ 289.5, 185.0, 316.0, 185.0, 316.0, 633.0, 319.5, 633.0 ],
 					"source" : [ "obj-7", 1 ]
@@ -1040,8 +1062,11 @@
 		"styles" : [ 			{
 				"name" : "Sky",
 				"default" : 				{
+					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"clearcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"selectioncolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
 					"textcolor_inverse" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
@@ -1054,10 +1079,7 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.501961, 1.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.4, 0.4, 1.0, 1.0 ],
 					"accentcolor" : [ 0.0, 0.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"textcolor" : [ 0.0, 0.0, 1.0, 1.0 ]
 				}
 ,
